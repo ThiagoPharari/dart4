@@ -79,7 +79,7 @@ mixin Armas {
     print("Baston magico: baston creado para magos, capaz de mejorar la eficacia de cada hechizo en un 1.25x cuando lo utiliza un hechizero");
   }
   void collarancestral(){
-    print("");
+    print("Collar ancestral: utilizado por todos los curanderos del mundo, contiene el poder del arbol primigenio y permite usar sus propiedades y atributos a los sanadores, potenciando su destreza");
   }
 }
   
