@@ -1,0 +1,85 @@
+//Ejercicio 7
+
+class Vehiculo {
+  void accion() {
+    print("Puedo acelarar");
+  }
+}
+
+class Terrestre extends Vehiculo {
+  @override
+  void accion() {
+    print("-- SOy un vehiculo terrestre --");
+    super.accion();
+    print("Acelero muy rápido");
+  }
+}
+
+class Aereo extends Vehiculo {
+  @override
+  void accion() {
+    print("-- Soy un vehiculo aereo --");
+    super.accion();
+    print("Puedo volar");
+  }
+}
+
+class Acuatico extends Vehiculo {
+  @override
+  void accion() {
+    print("-- Soy un vehiculo acuatico --");
+    super.accion();
+    print("Puedo navegear");
+  }
+}
+
+
+
+void main() {
+
+  List <Vehiculo> vehiculos=[];
+  vehiculos.add(Terrestre());
+  vehiculos.add(Aereo());
+  vehiculos.add(Acuatico());
+
+  
+  for(var vehiculo in vehiculos){
+    vehiculo.accion();
+  }
+}
+
+//Ejercicio 8
+
+mixin Hechizos {
+  void bolafuego(){
+    print("Bola de fuego: 15 daño por fuego, 5s de quemadura, -10 maná");
+  }
+  void rayogelido(){
+    print("Rayo Gélido: 12 daño de hielo, 10s ralentizacion, -15 maná");
+  }
+  void grantrueno(){
+    print("Gran Trueno: 25 daño electrico, 7s de paralisis, -30 maná");
+  }
+  void puasvenenosas(){
+    print("Puas Venenosas: 5 daño por veneno, estado envenedado, -12 maná");
+  }
+  void invocacion(){
+    print("Invocacion: 5s de casteo, 50% invocar 3 goblins, 25% invocar 5 goblins, 10% invocar goblin elite, 10% invocar 4 lobos terribles, 4.5% invocar goblin sanador + goblin élite, 0.5% invocar ejercito goblin, -20 maná");
+  }
+}
+
+mixin Armas {
+  void espadasacra(){
+    print("Espada sacra: espada imbuida por el poder divino, capaz de imbuir hasta 2 hechizos elementales dependiendo del portador");
+  }
+  void navajaterrible(){
+    print("Navaja terrible: navaja creada apartir de aleación de copernita y dientes de lobo terrible, requiere de gran habilidad para su correcto uso");
+  }
+  void bastonmagico(){
+    print("Baston magico: baston creado para magos, capaz de mejorar la eficacia de cada hechizo en un 1.25x cuando lo utiliza un hechizero");
+  }
+  void collarancestral(){
+    print("");
+  }
+}
+  
